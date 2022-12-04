@@ -1,6 +1,6 @@
 <?php
 //new line using /n
-echo nl2br();
+// nl2br();
 
 //displaying &_SERVER in readable format
 echo "<pre>";
@@ -11,7 +11,7 @@ echo "</pre>";
 $numbers = array(12, 45, 10, 25);
 
 //sum of array
-array_sum($numbers)
+array_sum($numbers);
 
 
 //average of array
@@ -19,7 +19,7 @@ $average = array_sum($numbers)/count($numbers);
 echo "average = ". $average. "</br>";
 
 //sorting array reversly from highest to lowest
-krsort(array $numbers);
+krsort($numbers);
 
 //associative array
 $information= array("Sara"=>31, "Walaa"=>39, "Ramy"=>40);
@@ -35,14 +35,5 @@ arsort($information);
 
 //sorting desc acc to key
 krsort($information);
-
-
-
-
-
-
-
-
-
 
 ?>
