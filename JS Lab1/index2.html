@@ -2,19 +2,23 @@
 
 <script>
 
-alert('It is the first release of a calculator that only has a summation feature');
+alert("It is the first release of a calculator that only has a summation feature");
 
-var x= prompt("Enter first number");
+var x= +prompt("Enter first number");
 console.log(x);
 
-var y= prompt("Enter second number");
+var y= +prompt("Enter second number");
 console.log(y);
+
+var result= x+y;
+console.log(result);
 
 function add(x, y) {
     alert(add(1,2));
-    return x+y
+    return x+y;
 }
 
 alert(x+y);
+
 
 </script>
