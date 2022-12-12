@@ -1,3 +1,5 @@
+<!-- Lab 3 Part 1 -->
+
 <?php
 // define values
 $name = $email = $groupnumber = $classdetails = $gender = $courses = $agree = "";
