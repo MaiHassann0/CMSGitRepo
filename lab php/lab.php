@@ -1,11 +1,16 @@
+<!-- Lab 1 -->
+
 <?php
+
+//Showing PHP info on browser:
      phpinfo();
          
-
+//Define constant:
      define("Name","Mai Website");
          echo constant("Name");
          echo "<br>";
 
+//Display server name, port & address:
      print($_SERVER['SERVER_NAME']);
          echo "<br>";
      print($_SERVER['SERVER_ADDR']);
@@ -13,9 +18,11 @@
      print($_SERVER['SERVER_PORT']);
          echo "<br>";
 
-         echo FILE;
+//Display file name with path:
+         echo __FILE__;
          echo "<br>";
 
+//Switch - case :
     $age = 10;
     switch ($age) {
         case $age < 5 :
