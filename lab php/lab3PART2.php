@@ -1,5 +1,15 @@
-<?php
+<!-- Lab 3 Part 2 -->
+<html>
+<head lang="en">
+        <link rel="stylesheet" href="lab3.css">
+        <meta charset="UTF-8"/>
+        <title> PHP class registration </title>
+        <meta name="description" content="Application name"/>
+ </head> 
+   <body>
+    <div class="form">
 
+    <?php
 
 $students = [
     ['name' => 'Alaa',
@@ -22,28 +32,7 @@ $students = [
     'email' => 'hany@test.com', 
     'status' => 'AAST'],
 ];
-
-// echo "<table>";
-
-// foreach ($students as $studentsarray){
-//     echo '<tr>';
-//     foreach ($studentsarray as $val) {
-//         echo '<td>' . $val . '</td>';
-//     }
-//      echo '</tr>';
-// }
-// echo "</table>";
-
 ?>
- <html>
-<head lang="en">
-        <link rel="stylesheet" href="lab3.css">
-        <meta charset="UTF-8"/>
-        <title> PHP class registration </title>
-        <meta name="description" content="Application name"/>
- </head> 
-    <body>
-    <div class="form">
      <table width="100%" ,border="1">
         <thead>
             <h2 style="color: blue;" > Application name: PHP class registration </h2>
@@ -52,38 +41,25 @@ $students = [
                 <th>E-mail</th>
                 <th>Status</th>
             </tr> 
-          
-            <tr>
-                <td> <?php echo $students[0]['name']; ?> </td>
-                <td> <?php echo $students[0]['email']; ?> </td>
-                <td style="color:red;" > <?php echo $students[0]['status']; ?> </td>
-            </tr>
-         
-            <tr>
-                <td> <?php echo $students[1]['name']; ?> </td>
-                <td> <?php echo $students[1]['email']; ?> </td>
-                <td> <?php echo $students[1]['status']; ?> </td>
-            </tr>
 
-            <tr>
-                <td> <?php echo $students[2]['name']; ?> </td>
-                <td> <?php echo $students[2]['email']; ?> </td>
-                <td> <?php echo $students[2]['status']; ?> </td>
-            </tr>
+        </thead>
 
-            <tr>
-                <td> <?php echo $students[3]['name']; ?> </td>
-                <td> <?php echo $students[3]['email']; ?> </td>
-                <td style="color:red;" > <?php echo $students[3]['status']; ?> </td>
-            </tr>
+        <?php
+        foreach($students as $key=>$value){
+            echo '<tr>';
 
-            <tr>
-                <td> <?php echo $students[4]['name']; ?> </td>
-                <td> <?php echo $students[4]['email']; ?> </td>
-                <td> <?php echo $students[4]['status']; ?> </td>
-            </tr>
-     </table>
-   </div>
+            foreach($value as $key1 => $value1){
+                if($value1=="Science") {
+               echo '<td>'.'<span style="color: red;" >' .$value1. '</span>'.'</td>';
+                }else{
+
+                echo '<td>' .$value1. '</td>';
+            }
+        }
+        echo '</tr>';
+    }
+         ?>
+         </table>
+   </div> 
 </body>
 <html> 
-
