@@ -11,7 +11,7 @@
 
 .submitBtn, .cancelBtn  ,  button {
     width: 150px;
-    height: 55px;
+    height: 45px;
     border-radius: 10px;
     border: 2px solid rgb(255, 255, 255);
     float: right;
