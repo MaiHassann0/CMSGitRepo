@@ -59,11 +59,12 @@ $MailStatus = $_POST['MailStatus'];
                <h1 style="color: blue; text-decoration: underline;"> 
               User Registration Form
                   </h1> 
-                  <p style="text-align:left;"> Please fill this form to add user record to the database. </p> </br>
+                  <p style="text-align:left;"> Please fill this form to add user record to the database. </p><hr> </br>
                   
+                 
+   
                   <tr>
-    <td>Name: </td>
-
+                  <td>Name: </td>
                   </tr>
         <tr>
     <td> <input type="text" name="uName" />
@@ -94,11 +95,11 @@ $MailStatus = $_POST['MailStatus'];
         </tr>
 
         <tr> <td>
-        <a href="Lab4Page2.php" > <input type="submit" name="submitBtn" value="Submit" class="submitBtn"/>  </a>
+       </br> <a href="Lab4Page2.php" > <input type="submit" name="submitBtn" value="Submit" class="submitBtn"/>  </a>
 </td> 
 
      <td>
-    <a href="Lab4Page1.php"><input type="submit" name="cancelBtn" value="Cancel" class="cancelBtn"/>  </a>
+     </br> <a href="Lab4Page1.php"><input type="submit" name="cancelBtn" value="Cancel" class="cancelBtn"/>  </a>
 </td> </tr>
 </form>
 </table>
