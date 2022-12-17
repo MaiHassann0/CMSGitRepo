@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-        <link rel="stylesheet" href="lab3.css">
+        <link rel="stylesheet" href="lab4.css">
         <meta charset="UTF-8"/>
         <title> User Registration Form </title>
         <meta name="description" content="Registration Form"/>
@@ -15,7 +15,7 @@
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = '';
-$dbname = 'User_Data';
+$dbname = 'app_form';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 // if(! $conn){
@@ -28,26 +28,25 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 // Create table 'form' in database 'user'
 
-$uName =$uEmail =$uGender =$mailStatus = "";
+$uName =$uEmail =$uGender =$Mail_status = "";
 
 $uName = $_POST['uName'];
 $uEmail = $_POST['uEmail'];
 $uGender = $_POST['uGender'];
-$$mailStatus = $_POST['mailStatus'];
-
+$MailStatus = $_POST['MailStatus'];
 
     if (isset($_POST["submitBtn"])){
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
           $sql= "INSERT INTO Reg_Form(User_name, Email, Gender, Mail_status ) 
-          VALUES('$uName', '$uEmail', '$uGender', '$mailStatus');";
+          VALUES('$uName', '$uEmail', '$uGender', '$MailStatus');";
 
             mysqli_query( $conn, $sql );
             mysqli_close($conn);                                                                                                                                                                                                                                                                                                                                                                                                           
             }
         }
-       
+    
 //  echo 'Inserted to table successfully'. '<br>'; 
 ?>
 
@@ -67,7 +66,7 @@ $$mailStatus = $_POST['mailStatus'];
 
                   </tr>
         <tr>
-    <td> <input type="text" name="uName" value="<?php echo $uName; ?>">
+    <td> <input type="text" name="uName" />
     </td>
         </tr>
 
@@ -75,7 +74,7 @@ $$mailStatus = $_POST['mailStatus'];
     <td> E-mail: </td>
            </tr> 
           <tr>
-    <td> <input type="email" name="uEmail" value="<?php echo $uEmail; ?>">
+    <td> <input type="email" name="uEmail" />
     </td>
           </tr>
 
@@ -83,22 +82,23 @@ $$mailStatus = $_POST['mailStatus'];
     <td>Gender: </td>
          </tr>
          <tr>
-    <td> <input type="radio" name="uGender" value="Female"value="<?php if (isset($uGender) && $uGender=="Female") echo "checked";?>"  /> Female <br/>
-            <input type="radio" name="uGender" value="Male"value="<?php if (isset($uGender) && $uGender=="Male") echo "checked";?>"  /> Male 
+    <td> <input type="radio" name="uGender" value="Female" /> Female <br/>
+            <input type="radio" name="uGender" /> Male 
         </td>
         </tr>
 
         <tr>
-   <td> <input type="checkbox" name="mailStatus" value="<?php echo $mailStatus; ?>"/> Recieve E-mails from us.
+   <td> <input type="checkbox" name="MailStatus" /> Recieve E-mails from us.
    </td>
+   
         </tr>
 
         <tr> <td>
-        <a href="Lab4Page2.php" > <input type="submit" name="submitBtn" value="Submit"/>  </a>
+        <a href="Lab4Page2.php" > <input type="submit" name="submitBtn" value="Submit" class="submitBtn"/>  </a>
 </td> 
 
      <td>
-    <a href="Lab4Page1.php" ><input type="submit" name="cancelBtn" value="Cancel"/>  </a>
+    <a href="Lab4Page1.php"><input type="submit" name="cancelBtn" value="Cancel" class="cancelBtn"/>  </a>
 </td> </tr>
 </form>
 </table>
