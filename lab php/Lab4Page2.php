@@ -13,8 +13,8 @@
  
     <div class = "form">
     <h1 style="color: blue; text-decoration: underline;"> 
-        User Details</h1>
-        <a href="Lab4Page1.php" target="_blank"><button >Add new user</button>  </a> 
+        User Details  <a href="Lab4Page1.php" target="_blank"><button >Add new user</button>  </a>  </h1>
+        <hr></br>
     <table style="border:1px solid;"> 
               <tr>
                 <th style="border:1px solid;">User #</th>
@@ -70,4 +70,5 @@ mysqli_close($conn);
 // echo "Data fetched successfully\n";
 
 ?>
+
 
