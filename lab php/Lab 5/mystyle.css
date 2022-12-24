@@ -1,0 +1,14 @@
+#navbar{
+    background-color: rgb(44, 41, 41);
+    overflow:hidden;
+}
+#navbar a{
+    float: left;
+    color: white;
+    padding: 14px 16px;
+    font-size: 18px;
+    text-decoration: none;
+}
+#navbar a:hover{
+    background-color: rgb(202, 23, 23);
+}
